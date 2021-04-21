@@ -80,7 +80,7 @@ export default {
               },
               alert("注册成功！"),
               this.$router.push({
-                path: "/register"
+                path: "/login"
               })
             )
               .then(function (response){

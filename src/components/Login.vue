@@ -17,6 +17,9 @@
         <el-form-item>
           <el-button type="primary" @click="submitForm('loginForm')" style="width:100%;">登录</el-button>
         </el-form-item>
+        <el-form-item>
+          <el-button type="primary" @click="toRegister()" style="width:100%;">注册</el-button>
+        </el-form-item>
       </el-form>
     </div>
   </div>
@@ -42,7 +45,11 @@ export default {
         password:this.loginForm.password,
       }).then(function (response){
         if(response.data.status === 200){
-          _this.$router.push({path: "/"})
+          // _this.$router.push({path: "/"})
+          _this.$router.replace({
+            path: '/',
+          })
+            .catch(()=>{});//把error 抛出来
           _this.$store.commit("login",response.data.object)
         }else{
           alert("账号或者密码错误")
@@ -53,6 +60,9 @@ export default {
         console.log(response)
       })
     },
+    toRegister(){
+      this.$router.replace('/register')
+    }
   }
 };
 </script>

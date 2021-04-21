@@ -74,7 +74,7 @@ export default {
         }
         this.visibleNotes.push(this.notes[i])
       }
-      console.log(this.visibleNotes)
+      // console.log(this.visibleNotes)
     },
 
     restrict(abs){
@@ -160,7 +160,7 @@ export default {
         }
         this.visibleNotes.push(this.notes[i])
       }
-      console.log(this.visibleNotes)
+      // console.log(this.visibleNotes)
     },
 
 
